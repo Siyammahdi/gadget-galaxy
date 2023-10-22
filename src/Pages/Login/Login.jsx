@@ -1,13 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import app from "../../../firebase.config";
-import { BsGoogle } from 'react-icons/Bs';
 import Navbar from "../../Components/Navbar/Navbar";
 
 const Login = () => {
@@ -16,11 +13,11 @@ const Login = () => {
         duration: 800
       });
 
-    const auth = getAuth(app)
+    
     const {signIn} = useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate();
-    const [user, setUser] = useState()
+
 
 
     const handleLogin = (e) => {
@@ -33,29 +30,16 @@ const Login = () => {
         signIn(email, password)
         .then(result => {
             console.log(result.user)
-            
             navigate(location?.state? location.state : "/")
-                   
+            toast('Logged in successfully')   
         })
         .catch(error => {
             console.error(error);
         })
     }
 
-
-    const googleProvider = new GoogleAuthProvider()
-
-    const googleSignIn = () => {
-        signInWithPopup(auth, googleProvider)
-        .then(result => {
-            const user = result.user
-            setUser(user);
-            toast("User Logged in Successfully")
-        })
-        .catch(error => console.error(error));
-    }
     
-    console.log(user);
+    
     
     return (  
         <div>
@@ -86,7 +70,6 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6 gap-5">
                                 <button className="btn btn-primary bg-blue-600">Login</button>
-                                <button onClick={() => googleSignIn()} className="btn p-2 "><BsGoogle></BsGoogle> Google</button>
                             </div>
                         </form>
                         <p className="text-center pb-5">Dont have an account? please <Link className="font-bold text-blue-700" to="/register">Register</Link></p>

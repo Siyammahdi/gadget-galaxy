@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from '../../Components/Navbar/Navbar';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import { BsGoogle } from 'react-icons/Bs';
+import app from '../../../firebase.config';
 
 
 
@@ -21,6 +24,7 @@ const Register = () => {
 
       const [regError, setRegError] = useState('')
       const [success, setSuccess] = useState('')
+      const [user, setUser] = useState()
 
 
       const handleRegister = (e) => {
@@ -56,7 +60,20 @@ const Register = () => {
         })
     }
 
+    const auth = getAuth(app)
+    const googleProvider = new GoogleAuthProvider()
 
+    const googleSignIn = () => {
+        signInWithPopup(auth, googleProvider)
+        .then(result => {
+            const user = result.user
+            setUser(user);
+            toast("User Registered in Successfully")
+        })
+        .catch(error => console.error(error));
+    }
+
+    console.log(user);
     
 
 
@@ -91,6 +108,7 @@ const Register = () => {
                             </div>
                             <div className="form-control mt-6 gap-5">
                                 <button className="btn btn-primary bg-blue-600">Register</button>
+                                <button onClick={() => googleSignIn()} className="btn p-2 "><BsGoogle></BsGoogle> Google</button>
                                 
                             </div>
                             <div>

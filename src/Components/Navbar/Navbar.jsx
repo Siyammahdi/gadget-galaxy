@@ -4,7 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
 
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
 
     const handleSignOut = () => {
         logOut()
@@ -22,7 +22,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar shadow-none text-white backdrop-blur-md">
+            <div className="navbar shadow-none text-white backdrop-blur-md ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,9 +32,9 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl gap-0 hidden lg:block">Gadget<span className="text">Galaxy</span></a>
+                    <a className="btn btn-ghost normal-case text-2xl gap-0 hidden lg:block font-thin ">Gadget<span className="text text-blue-800 font-bold">Galaxy</span></a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal px-1">
                         {links}
                     </ul>
@@ -42,19 +42,19 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <div>
                         {
-                            user ? <div className="text-center justify-center flex text-xs lg:text-base mx-3 gap-2">
-                                <div>
-                                    <p>{user.email}</p>
-                                    <p>{user.displayName}</p>
-                                </div>
-                                <div>
+                            user ?
+                                <div className="text-center justify-center items-center flex text-xs lg:text-base mx-3 gap-2 rounded-full bg-blue-500 text-white font-semibold p-1">
+                                    <div>
+                                        <p>{user.displayName}</p>
+                                    </div>
                                     <div className="avatar">
-                                        <div className="w-10 rounded-full">
+                                        <div className="w-7 rounded-full">
                                             <img src={user.photoURL} />
                                         </div>
                                     </div>
                                 </div>
-                            </div> : ""
+                                :
+                                ""
                         }
                     </div>
                     {
@@ -62,7 +62,7 @@ const Navbar = () => {
                             <button onClick={handleSignOut} className="btn">Sign Out</button>
                             :
                             <Link to="/login">
-                                <button className="btn">Login</button>
+                                <button className="btn bg-opacity-40 border-none text-white ">Login</button>
                             </Link>
                     }
                 </div>

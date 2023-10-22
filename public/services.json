@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "service_name": "Device Calibration",
+      "service_details": "Our advanced technicians fine-tune your holographic display devices for optimal 3D and augmented reality experiences. We adjust holographic projections, brightness, and color accuracy for immersive entertainment and productivity.",
+      "image_url": "https://i.ibb.co/hCX5Z6f/1813806.png"
+    },
+    {
+      "id": 2,
+      "service_name": "Data Encryption Services",
+      "service_details": "Protect your sensitive data with cutting-edge quantum encryption solutions. Our experts implement quantum encryption algorithms to ensure your information remains secure from even the most sophisticated cyber threats.",
+      "image_url": "https://i.ibb.co/x720HZ1/2612493.png"
+    },
+    {
+      "id": 3,
+      "service_name": "Nanobot Tech Support",
+      "service_details": "We offer assistance with programming and maintaining nanobots for personal or industrial use. Our technicians help you troubleshoot, upgrade, and optimize your fleet of microscopic robots for various tasks.",
+      "image_url": "https://i.ibb.co/8XhL840/2976128.png"
+    },
+    {
+      "id": 4,
+      "service_name": "Chef Customization",
+      "service_details": "Personalize your AI-powered kitchen assistant to create unique recipes and meal plans. Our experts tailor the AI's taste preferences, dietary restrictions, and cooking techniques to match your culinary desires.",
+      "image_url": "https://i.ibb.co/fDgsnXr/instrument-calibration-process.png"
+    },
+    {
+      "id": 5,
+      "service_name": "Device Maintenance",
+      "service_details": "Keep your teleportation devices running smoothly with routine maintenance. We inspect and calibrate the teleportation coordinates to ensure safe and accurate transportation between locations.",
+      "image_url": "https://i.ibb.co/cFfcf98/maintenance-icon-7.png"
+    },
+    {
+      "id": 6,
+      "service_name": "Robo Emotion Upgrade",
+      "service_details": "Enhance your robotic companion's emotional responses and interactions. Our technicians install software upgrades to make your robo-pet more empathetic, joyful, or playful based on your preferences.",
+      "image_url": "https://i.ibb.co/wgTpV8n/pngtree-screen-setting-business-monitor-service-vector-png-image-35500658.png"
+    }
+  ]
+  
