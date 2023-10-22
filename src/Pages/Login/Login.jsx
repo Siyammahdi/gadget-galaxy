@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../../firebase.config";
 import { BsGoogle } from 'react-icons/Bs';
+import Navbar from "../../Components/Navbar/Navbar";
 
 const Login = () => {
 
@@ -59,12 +60,13 @@ const Login = () => {
     return (  
         <div>
             <div className="hero min-h-screen bg-[url('https://i.ibb.co/qgLmJKp/blue-smooth-wall-textured-background.jpg')] ">
+            <div className="fixed top-0 w-full"><Navbar></Navbar></div>
                 <div className="hero-content flex-col lg:flex-row-reverse lg:px-28 gap-20">
                     <div className="text-center lg:text-left text-white">
                         <h1 data-aos="fade-down" className="text-5xl font-bold">Login now!</h1>
                         <p data-aos="fade-up" className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
-                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-2xl  bg-black bg-opacity-30 backdrop-blur-sm">
+                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-2xl  backdrop-blur-md">
                         <form onSubmit={handleLogin} className="card-body">
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
@@ -80,7 +82,7 @@ const Login = () => {
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
-                                {/* <p className="text-red-500 ">{errorMsg}</p> */}
+                                
                             </div>
                             <div className="form-control mt-6 gap-5">
                                 <button className="btn btn-primary bg-blue-600">Login</button>
