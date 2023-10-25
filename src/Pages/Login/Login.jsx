@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from "../../Components/Navbar/Navbar";
+
 
 const Login = () => {
 
@@ -43,8 +43,7 @@ const Login = () => {
     
     return (  
         <div>
-            <div className="hero min-h-screen bg-[url('https://i.ibb.co/qgLmJKp/blue-smooth-wall-textured-background.jpg')] ">
-            <div className="fixed top-0 w-full"><Navbar></Navbar></div>
+            <div className="hero min-h-screen bg-[url('https://i.ibb.co/qgLmJKp/blue-smooth-wall-textured-background.jpg')]">
                 <div className="hero-content flex-col lg:flex-row-reverse lg:px-28 gap-20">
                     <div className="text-center lg:text-left text-white">
                         <h1 data-aos="fade-down" className="text-5xl font-bold">Login now!</h1>
@@ -54,17 +53,17 @@ const Login = () => {
                         <form onSubmit={handleLogin} className="card-body">
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text text-white">Email</span>
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered bg-white bg-opacity-10" required />
                             </div>
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text text-white">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered bg-white bg-opacity-10" required />
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    <a href="#" className="label-text-alt link link-hover text-blue-500">Forgot password?</a>
                                 </label>
                                 
                             </div>
@@ -72,7 +71,7 @@ const Login = () => {
                                 <button className="btn btn-primary bg-blue-600">Login</button>
                             </div>
                         </form>
-                        <p className="text-center pb-5">Dont have an account? please <Link className="font-bold text-blue-700" to="/register">Register</Link></p>
+                        <p className="text-center pb-5 text-white">Dont have an account? please <Link className="font-bold text-blue-500 hover:text-blue-600" to="/register">Register</Link></p>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,10 @@ import Root from './Layout/Root';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
 import AuthProvider from './Providers/AuthProvider';
+import AddProduct from './Pages/AddProduct/AddProduct';
+import MyCart from './Pages/MyCart/MyCart';
+import Products from './Pages/Products/Products';
+import ProductDetails from './Pages/ProductDetails/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +34,24 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
+      {
+        path: "/addProduct",
+        element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/myCart",
+        element: <MyCart></MyCart>,
+      },
+      {
+        path:"/products/:brand",
+        element: <Products></Products>,
+        loader: ({params}) => fetch(`http://localhost:5000/gadget/${params.brand}`)
+      },
+      {
+        path:"/productDetails/:_id",
+        element: <ProductDetails></ProductDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/gadget/${params._id}`)
+      }
     ]
   },
 ]);

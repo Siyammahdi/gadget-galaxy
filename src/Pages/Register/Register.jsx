@@ -5,7 +5,6 @@ import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from '../../Components/Navbar/Navbar';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import { BsGoogle } from 'react-icons/Bs';
 import app from '../../../firebase.config';
@@ -79,30 +78,29 @@ const Register = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-[url('https://i.ibb.co/qgLmJKp/blue-smooth-wall-textured-background.jpg')]">
-            <div className="fixed top-0 w-full"><Navbar></Navbar></div>
+            <div className="hero min-h-screen bg-[url('https://i.ibb.co/qgLmJKp/blue-smooth-wall-textured-background.jpg')] ">
                 <div className="hero-content flex-col lg:flex-row-reverse lg:px-28 gap-20">
                     <div className="text-center lg:text-left text-white">
                         <h1 data-aos="fade-down" className="text-5xl font-bold">Register now!</h1>
                         <p data-aos="fade-up" className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
-                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-2xl  backdrop-blur-md">
+                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-2xl  backdrop-blur-md ">
                         <form onSubmit={handleRegister} className="card-body">
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span> 
+                                    <span className="label-text text-white">Name</span> 
                                 </label>
                                 <input type="text" name='name' placeholder="name" className="input input-bordered bg-white bg-opacity-10" required />
                             </div>
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text text-white">Email</span>
                                 </label>
                                 <input type="email" name='email' placeholder="email" className="input input-bordered bg-white bg-opacity-10" required />
                             </div>
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text text-white">Password</span>
                                 </label>
                                 <input type="password" name='password' placeholder="password" className="input input-bordered bg-white bg-opacity-10" required />
                             </div>
@@ -120,7 +118,7 @@ const Register = () => {
                                 }
                             </div>
                         </form>
-                        <p className="text-center pb-5">Already have an account? please <Link className="font-bold text-blue-700" to="/login">Login</Link></p>
+                        <p className="text-center pb-5 text-white">Already have an account? please <Link className="font-bold text-blue-500 hover:text-blue-700" to="/login">Login</Link></p>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import Services from "../../Components/Services/Services";
 
 const Home = () => {
     return (
-        <div className="bg-gradient-to-r from-blue-400 to-blue-200 ...">
+        <div>
             <Banner></Banner>
             <Brands></Brands>
             <Services></Services>
