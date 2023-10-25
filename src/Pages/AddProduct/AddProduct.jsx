@@ -17,7 +17,7 @@ const AddProduct = () => {
         const newProduct = { name, brand, type, price, rating, description, photoURL};
         console.log(newProduct);
 
-        //send data to server
+        //send new data to server
         fetch("http://localhost:5000/gadget", {
             method: 'POST',
             headers: {
