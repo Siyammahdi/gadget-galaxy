@@ -49,10 +49,10 @@ const ProductDetails = () => {
 
 
     return (
-        <div className='mx-24'> 
+        <div className='lg:mx-24 mb-10'> 
             <div className="hero min-h-screen pt-28">
                 <div className="hero-content flex-col ">
-                    <div className='bg-black bg-opacity-25 flex justify-between rounded-2xl'>
+                    <div className='bg-black bg-opacity-25 flex flex-col-reverse lg:flex-row justify-between rounded-2xl'>
                         <div className='p-10'>
                             <h1 className="text-4xl font-bold ">{name}</h1>
                             <h1 className="text-2xl font-bold px-2">{brand}</h1>
@@ -62,7 +62,7 @@ const ProductDetails = () => {
                             <button onClick={handleAddCart} className="btn bg-blue-500 hover:bg-blue-700 border-none text-white">Add to Cart</button>
                             <button onClick={handleBack} className='btn mb-5 mx-4  bg-blue-500 hover:bg-blue-700 border-none text-white'>Go Back</button>
                         </div>
-                        <img className="w-2/4 h-auto rounded-r-2xl" src={photoURL} />
+                        <img className="w-full lg:w-2/4 h-auto rounded-t-2xl lg:rounded-r-2xl" src={photoURL} />
                     </div>
                 </div>
             </div>

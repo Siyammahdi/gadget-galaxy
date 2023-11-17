@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
         <div>
             <div>
                 <div className="hero-content flex-col lg:flex-row bg-black bg-opacity-40 rounded-2xl justify-between gap-10">
-                    <div className='flex gap-20 items-center'>
+                    <div className='flex flex-col lg:flex-row gap-20 lg:items-center'>
                         <img src={photoURL} className="w-72 h-60 rounded-lg shadow-2xl ml-0" />
                         <div className='flex flex-col gap-2'>
                             <h1 className="text-3xl font-bold">{name}</h1>

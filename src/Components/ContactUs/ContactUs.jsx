@@ -3,15 +3,15 @@
 const ContactUs = () => {
     return (
         <div>
-            <div className="px-4 lg:px-28 pb-28">
+            <div className="px-5 lg:px-28 pb-28">
 
                 <div className="pb-28">
-                    <h2 className="text-5xl font bold text-blue-700 py-5"><span className="text-white font-semibold">Contact</span> Us</h2>
+                    <h2 className="text-3xl lg:text-5xl font bold text-blue-700 py-5"><span className="text-white font-semibold">Contact</span> Us</h2>
                     <hr />
                 </div>
 
-                <section className="bg-white bg-opacity-20 rounded-3xl mt-5">
-                    <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+                <section className="bg-white bg-opacity-20 rounded-lg lg:rounded-3xl mt-5">
+                    <div className="mx-auto max-w-screen-xl py-16 px-4 lg:px-8">
                         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
                             <div className="lg:col-span-2 lg:py-12">
                                 <h3 className="text-3xl text-blue-700 font-semibold py-5">Contact Information</h3>
@@ -35,12 +35,12 @@ const ContactUs = () => {
 
                             </div>
 
-                            <div className="rounded-lg p-8 lg:col-span-3 lg:p-12">
+                            <div className="rounded-lg lg:col-span-3 lg:p-12">
                                 <form action="" className="space-y-4">
                                     <div>
                                         <label className="sr-only" htmlFor="name">Name</label>
                                         <input
-                                            className="w-full rounded-lg border-gray-200 bg-white bg-opacity-30 text-gray-600 p-3 text-sm"
+                                            className="w-full rounded-lg border-gray-200 bg-white bg-opacity-30 text-gray-200 p-3 text-sm"
                                             placeholder="Name"
                                             type="text"
                                             id="name"
@@ -51,7 +51,7 @@ const ContactUs = () => {
                                         <div>
                                             <label className="sr-only" htmlFor="email">Email</label>
                                             <input
-                                                className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-600 border-gray-200 p-3 text-sm"
+                                                className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm"
                                                 placeholder="Email address"
                                                 type="email"
                                                 id="email"
@@ -61,7 +61,7 @@ const ContactUs = () => {
                                         <div>
                                             <label className="sr-only" htmlFor="phone">Phone</label>
                                             <input
-                                                className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-600 border-gray-200 p-3 text-sm"
+                                                className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm"
                                                 placeholder="Phone Number"
                                                 type="tel"
                                                 id="phone"
@@ -73,7 +73,7 @@ const ContactUs = () => {
                                         <label className="sr-only" htmlFor="message">Message</label>
 
                                         <textarea
-                                            className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-600 border-gray-200 p-3 text-sm"
+                                            className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm"
                                             placeholder="Message"
                                             rows="8"
                                             id="message"

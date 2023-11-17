@@ -66,11 +66,11 @@ const Register = () => {
         <div>
             <div className="hero min-h-screen bg-[url('https://i.ibb.co/qgLmJKp/blue-smooth-wall-textured-background.jpg')] ">
                 <div className="hero-content flex-col lg:flex-row-reverse lg:px-28 gap-20">
-                    <div className="text-center lg:text-left text-white">
+                    <div className="text-center lg:text-left text-white pt-28">
                         <h1 data-aos="fade-down" className="text-5xl font-bold">Register now!</h1>
                         <p data-aos="fade-up" className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
-                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-2xl  backdrop-blur-md mt-10">
+                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-lg lg:shadow-2xl  backdrop-blur-md mb-10">
                         <form onSubmit={handleRegister} className="card-body">
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">

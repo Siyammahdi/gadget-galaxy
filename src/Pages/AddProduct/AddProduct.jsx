@@ -44,16 +44,16 @@ const AddProduct = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-[url('https://i.ibb.co/qgLmJKp/blue-smooth-wall-textured-background.jpg')] px-28">
+            <div className="hero min-h-screen bg-[url('https://i.ibb.co/qgLmJKp/blue-smooth-wall-textured-background.jpg')]  lg:px-28">
                 <div className="hero-content flex-col lg:flex-row items-start gap-20 my-28">
                     <div className=' text-white mt-24'>
-                        <h3 className='text-5xl mb-5'>Add <span className='text-blue-600 '>Products</span></h3>
-                        <p>Fill up the from by providing authentic data. These will store as a product on database</p>
+                        <h3 className='text-3xl lg:text-5xl mb-5'>Add <span className='text-blue-600 '>Products</span></h3>
+                        <p className='text-sm md:text-base'>Fill up the from by providing authentic data. These will store as a product on database</p>
                     </div>
-                    <div className="card flex-shrink-0 w-2/3 shadow-black shadow-2xl backdrop-blur-md">
+                    <div className="card flex-shrink-0 p-5 lg:w-2/3 shadow-black shadow-lg lg:shadow-2xl backdrop-blur-md">
                         <form onSubmit={handleAddCoffee}>
-                            <div className="mx-28 font-sans font-semibold text-white py-10">
-                                <div className="grid grid-cols-2 grid-rows-3 gap-5 ">
+                            <div className="lg:mx-28 font-sans font-semibold text-white py-10">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-5 ">
                                     <label>
                                         <h3 className="text-left my-2 text-lg">Name</h3>
                                         <input type="text" name="name" placeholder="Enter Product name" className="input w-full text-black bg-white bg-opacity-10" required />
