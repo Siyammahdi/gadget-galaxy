@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
     return (
         <div>
-            <div className="hero min-h-screen bg-[url('https://i.ibb.co/m5yL04y/modern-stationary-collection-arrangement.jpg')] overflow-hidden">
+            <div className="hero min-h-screen bg-[url('https://i.ibb.co/HFbzVvh/modern-stationary-collection-arrangement.jpg')] overflow-hidden">
                 <div className="hero-content text-center text-neutral-content " >
                 <div className="bg-transparent backdrop-blur-md w-1/2 absolute right-0"></div>
                     <div className="max-w-md text-right absolute right-28">

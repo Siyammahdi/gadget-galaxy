@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../../firebase.config";
+import { BsGoogle } from 'react-icons/Bs';
+
 
 
 const Login = () => {
@@ -38,7 +42,23 @@ const Login = () => {
         })
     }
 
-    
+
+    const [user, setUser] = useState()
+    const auth = getAuth(app)
+    const googleProvider = new GoogleAuthProvider()
+
+    const googleSignIn = () => {
+        signInWithPopup(auth, googleProvider)
+        .then(result => {
+            const user = result.user
+            setUser(user);
+            toast("User Registered Successfully")
+            navigate(location?.state? location.state : "/")
+        })
+        .catch(error => console.error(error));
+    }
+
+    console.log(user);
     
     
     return (  
@@ -49,7 +69,7 @@ const Login = () => {
                         <h1 data-aos="fade-down" className="text-5xl font-bold">Login now!</h1>
                         <p data-aos="fade-up" className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
-                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-2xl  backdrop-blur-md">
+                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-2xl  backdrop-blur-md mt-10">
                         <form onSubmit={handleLogin} className="card-body">
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
@@ -69,6 +89,7 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6 gap-5">
                                 <button className="btn btn-primary bg-blue-600">Login</button>
+                                <button onClick={() => googleSignIn()} className="btn p-2 "><BsGoogle></BsGoogle> Google</button>
                             </div>
                         </form>
                         <p className="text-center pb-5 text-white">Dont have an account? please <Link className="font-bold text-blue-500 hover:text-blue-600" to="/register">Register</Link></p>

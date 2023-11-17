@@ -2,12 +2,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
-import { BsGoogle } from 'react-icons/Bs';
-import app from '../../../firebase.config';
+
 
 
 
@@ -19,11 +17,12 @@ const Register = () => {
       });
 
       const {createUser} = useContext(AuthContext)
+      const navigate = useNavigate()
     
 
       const [regError, setRegError] = useState('')
       const [success, setSuccess] = useState('')
-      const [user, setUser] = useState()
+
 
 
       const handleRegister = (e) => {
@@ -53,26 +52,13 @@ const Register = () => {
             console.log(result.user);
             toast("User Registered Successfully")
             form.reset()
+            navigate(location?.state? location.state : "/")
         })
         .catch(error => {
             setRegError(error.message)
         })
     }
 
-    const auth = getAuth(app)
-    const googleProvider = new GoogleAuthProvider()
-
-    const googleSignIn = () => {
-        signInWithPopup(auth, googleProvider)
-        .then(result => {
-            const user = result.user
-            setUser(user);
-            toast("User Registered in Successfully")
-        })
-        .catch(error => console.error(error));
-    }
-
-    console.log(user);
     
 
 
@@ -84,7 +70,7 @@ const Register = () => {
                         <h1 data-aos="fade-down" className="text-5xl font-bold">Register now!</h1>
                         <p data-aos="fade-up" className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
-                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-2xl  backdrop-blur-md ">
+                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-2xl  backdrop-blur-md mt-10">
                         <form onSubmit={handleRegister} className="card-body">
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
@@ -106,7 +92,7 @@ const Register = () => {
                             </div>
                             <div className="form-control mt-6 gap-5">
                                 <button className="btn btn-primary bg-blue-600">Register</button>
-                                <button onClick={() => googleSignIn()} className="btn p-2 "><BsGoogle></BsGoogle> Google</button>
+                                
                                 
                             </div>
                             <div>
