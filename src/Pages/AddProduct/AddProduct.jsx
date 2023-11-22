@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 const AddProduct = () => {
 
 
-    const handleAddCoffee = (e) => {
+    const handleAddProduct = (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -51,7 +51,7 @@ const AddProduct = () => {
                         <p className='text-sm md:text-base'>Fill up the from by providing authentic data. These will store as a product on database</p>
                     </div>
                     <div className="card flex-shrink-0 p-5 lg:w-2/3 shadow-black shadow-lg lg:shadow-2xl backdrop-blur-md">
-                        <form onSubmit={handleAddCoffee}>
+                        <form onSubmit={handleAddProduct}>
                             <div className="lg:mx-28 font-sans font-semibold text-white py-10">
                                 <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-5 ">
                                     <label>

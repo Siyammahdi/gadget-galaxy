@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
                     </div>
                     <div className='flex flex-col gap-2 mr-16'>
                         <h2 className='text-3xl font-bold flex items-center'><BsCurrencyDollar></BsCurrencyDollar> {price}</h2>
-                        <Link>
+                        <Link to={`/updateProduct/${_id}`}>
                             <button className="btn bg-blue-500 text-white hover:bg-blue-700"><HiPencil className='text-xl'></HiPencil> Update</button>
                         </Link>
                         <Link to={`/productDetails/${_id}`}>

@@ -45,12 +45,12 @@ const Navbar = () => {
                     <div>
                         {
                             user ?
-                                <div className="text-center justify-center items-center flex text-xs lg:text-base mx-3 gap-2 rounded-full bg-blue-500 text-white font-semibold p-1">
+                                <div className="text-center justify-center items-center flex text-xs lg:text-base btn btn-sm lg:btn mx-2 px-2 border-none rounded-lg bg-base-100 bg-opacity-50 text-white lg:bg-opacity-50 lg:text-white font-semibold p-1">
                                     <div>
                                         <p>{user.displayName}</p>
                                     </div>
                                     <div className="avatar">
-                                        <div className="w-7 rounded-full">
+                                        <div className="w-5 lg:w-7 rounded-full">
                                             <img src={user.photoURL} />
                                         </div>
                                     </div>

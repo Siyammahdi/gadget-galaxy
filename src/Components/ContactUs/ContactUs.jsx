@@ -36,11 +36,11 @@ const ContactUs = () => {
                             </div>
 
                             <div className="rounded-lg lg:col-span-3 lg:p-12">
-                                <form action="" className="space-y-4">
+                                <form action="" className="space-y-4 ">
                                     <div>
                                         <label className="sr-only" htmlFor="name">Name</label>
                                         <input
-                                            className="w-full rounded-lg border-gray-200 bg-white bg-opacity-30 text-gray-200 p-3 text-sm"
+                                            className="w-full rounded-lg border-gray-200 bg-white bg-opacity-30 text-gray-200 p-3 text-sm placeholder:text-white"
                                             placeholder="Name"
                                             type="text"
                                             id="name"
@@ -51,7 +51,7 @@ const ContactUs = () => {
                                         <div>
                                             <label className="sr-only" htmlFor="email">Email</label>
                                             <input
-                                                className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm"
+                                                className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm placeholder:text-white"
                                                 placeholder="Email address"
                                                 type="email"
                                                 id="email"
@@ -61,7 +61,7 @@ const ContactUs = () => {
                                         <div>
                                             <label className="sr-only" htmlFor="phone">Phone</label>
                                             <input
-                                                className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm"
+                                                className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm placeholder:text-white"
                                                 placeholder="Phone Number"
                                                 type="tel"
                                                 id="phone"
@@ -73,7 +73,7 @@ const ContactUs = () => {
                                         <label className="sr-only" htmlFor="message">Message</label>
 
                                         <textarea
-                                            className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm"
+                                            className="w-full rounded-lg  bg-white bg-opacity-30 text-gray-200 border-gray-200 p-3 text-sm placeholder:text-white"
                                             placeholder="Message"
                                             rows="8"
                                             id="message"
@@ -83,7 +83,7 @@ const ContactUs = () => {
                                     <div className="mt-4">
                                         <button
                                             type="submit"
-                                            className="inline-block w-full rounded-lg bg-blue-500 px-5 py-3 font-medium text-white sm:w-auto"
+                                            className="inline-block w-full rounded-lg bg-blue-500 px-5 py-3 font-medium text-white sm:w-auto placeholder:text-white"
                                         >
                                             Send Message
                                         </button>

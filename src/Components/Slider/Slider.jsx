@@ -43,24 +43,15 @@ export default function Slider() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <img className='w-full opacity-40 h-full' src="https://i.ibb.co/6XhKjNQ/50c451fd60a33ae80e8475bf9d051f6e73dc580e.jpg" alt="nai" />
-                    <div className='absolute top-56 left-56'>
-                        <h2 className='text-5xl mb-5'>Hackenton</h2>
-                        <p className=' bg-white bg-opacity-10 p-4 w-3/6 text-gray-300 rounded-lg'>A hackathon is a collaborative and intensive event where individuals or teams of participants, often including programmers, developers, designers, and other tech enthusiasts,often within a limited timeframe, which can range from a few hours to several days.</p>
-                    </div>
+                    
                 </SwiperSlide>
                 <SwiperSlide>
                     <img className='w-full opacity-40 h-full' src="https://i.ibb.co/tKz0BRH/Gear-Google-Pixel-6-top.jpg" alt="nai" />
-                    <div className='absolute top-56 left-56'>
-                        <h2 className='text-5xl mb-5'>Hackathon</h2>
-                        <p className=' bg-white bg-opacity-10 p-4 w-3/6 text-gray-300 rounded-lg'>A hackathon is a collaborative and intensive event where individuals or teams of participants, often including programmers, developers, designers, and other tech enthusiasts,often within a limited timeframe, which can range from a few hours to several days.</p>
-                    </div>
+                    
                 </SwiperSlide>
                 <SwiperSlide>
                     <img className='w-full opacity-40 h-full' src="https://i.ibb.co/t4bcDMq/Apple-September-2022-launch-hero-geo-jpg-landing-big-2x.jpg" alt="nai" />
-                    <div className='absolute top-56 left-56'>
-                        <h2 className='text-5xl mb-5'>Hackathon</h2>
-                        <p className=' bg-white bg-opacity-10 p-4 w-3/6 text-gray-300 rounded-lg'>A hackathon is a collaborative and intensive event where individuals or teams of participants, often including programmers, developers, designers, and other tech enthusiasts,often within a limited timeframe, which can range from a few hours to several days.</p>
-                    </div>
+                    
                 </SwiperSlide>
 
 

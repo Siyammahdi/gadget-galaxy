@@ -3,12 +3,13 @@ import Slider from "../../Components/Slider/Slider";
 import Product from "./ProductCard";
 
 
+
 const Products = () => {
 
     const productData = useLoaderData();
 
     return (
-        <div className="">
+        <div>
             <Slider></Slider>
             <div className="grid gap-10 mx-4 lg:mx-28 py-20 lg:py-36">
                 {
