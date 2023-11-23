@@ -11,7 +11,7 @@ const MyCart = () => {
 
     const [items, setItems] = useState([cartData]);
     console.log(items);
-
+    
     const handleDelete = (_id) => {
         console.log(_id);
         Swal.fire({

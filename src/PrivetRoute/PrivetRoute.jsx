@@ -11,7 +11,7 @@ const PrivetRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
 
     if (loading) {
-        return <div>
+        return <div className="my-24">
             <h1>{ <Skeleton />}</h1>
             {<Skeleton count={4} />}
         </div>

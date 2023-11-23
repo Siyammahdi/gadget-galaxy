@@ -10,11 +10,11 @@ const ContactUs = () => {
                     <hr />
                 </div>
 
-                <section className="bg-white bg-opacity-20 rounded-lg lg:rounded-3xl mt-5">
+                <section className="dark:bg-white bg-black bg-opacity-50 dark:bg-opacity-20 rounded-lg lg:rounded-3xl mt-5">
                     <div className="mx-auto max-w-screen-xl py-16 px-4 lg:px-8">
                         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
                             <div className="lg:col-span-2 lg:py-12">
-                                <h3 className="text-3xl text-blue-700 font-semibold py-5">Contact Information</h3>
+                                <h3 className="text-3xl text-blue-400 font-semibold py-5">Contact Information</h3>
                                 <p className="max-w-xl text-lg text-gray-200">
                                     At the same time, the fact that we are wholly owned and totally
                                     independent from manufacturer and other group control gives you
@@ -22,7 +22,7 @@ const ContactUs = () => {
                                 </p>
 
                                 <div className="my-8">
-                                    <a href="" className="text-2xl font-bold text-blue-700">
+                                    <a href="" className="text-2xl font-bold text-blue-400">
                                         +880 1774 010 501
                                     </a>
 

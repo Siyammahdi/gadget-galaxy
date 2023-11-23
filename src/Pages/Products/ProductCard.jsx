@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
-
+    
     const { _id, photoURL, name, brand, type, price, rating } = product;
+
 
     return (
         <div>
@@ -19,16 +20,15 @@ const ProductCard = ({ product }) => {
                             <h2 className='text-xl'>{brand}</h2>
                             <h2 className='text-lg'>{type}</h2>
                             <h2 className='text-amber-500'>{rating} out of 5</h2>
-
                         </div>
                     </div>
                     <div className='flex flex-col gap-2 mr-16'>
                         <h2 className='text-3xl font-bold flex items-center'><BsCurrencyDollar></BsCurrencyDollar> {price}</h2>
                         <Link to={`/updateProduct/${_id}`}>
-                            <button className="btn bg-blue-500 text-white hover:bg-blue-700"><HiPencil className='text-xl'></HiPencil> Update</button>
+                            <button className="btn bg-blue-500 text-white hover:bg-blue-700 border-none"><HiPencil className='text-xl'></HiPencil> Update</button>
                         </Link>
                         <Link to={`/productDetails/${_id}`}>
-                            <button className="btn bg-blue-500 text-white hover:bg-blue-700"><CgDetailsMore className='text-xl'></CgDetailsMore> Details</button>
+                            <button className="btn bg-blue-500 text-white hover:bg-blue-700 border-none"><CgDetailsMore className='text-xl'></CgDetailsMore> Details</button>
                         </Link>
                     </div>
                 </div>
