@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { MdDelete } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import { MdDelete } from 'react-icons/Md';
+
 
 
 const CartCard = ({ card, handleDelete }) => {

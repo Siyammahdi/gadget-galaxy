@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -19,6 +19,7 @@ const UpdateProduct = () => {
         setDetail(findDetails)
     }, [id, detailsData])
 
+    const navigate = useNavigate();
 
     const handleUpdate = (e) => {
         e.preventDefault();
@@ -52,6 +53,7 @@ const UpdateProduct = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    navigate(-1)
                 }
             })
 

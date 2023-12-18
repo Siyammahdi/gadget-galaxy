@@ -11,9 +11,15 @@ const PrivetRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
 
     if (loading) {
-        return <div className="my-24">
-            <h1>{ <Skeleton />}</h1>
-            {<Skeleton count={4} />}
+        return <div className="py-36">
+            <div className="px-28">
+                <h1>{<Skeleton height={70} width={1130} />}</h1>
+                <div className="flex gap-10 mt-14">
+                    <h1>{<Skeleton height={400} width={350} />}</h1>
+                    <h1>{<Skeleton height={400} width={350} />}</h1>
+                    <h1>{<Skeleton height={400} width={350} />}</h1>
+                </div>
+            </div>
         </div>
     }
 

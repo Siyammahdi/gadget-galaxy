@@ -35,14 +35,15 @@ const MyCart = () => {
                             Swal.fire(
                                 'Deleted!',
                                 'Your Gadget has been deleted successfully.',
-                                'success'
+                                'success',
                             )
 
-                            setItems(prevItems => prevItems.filter(item => item._id !== _id));
+                            setItems(prevItems => prevItems.filter(item => item._id !== _id))
                         }
 
                     })
             }
+            window.location.reload()
         })
     }
 

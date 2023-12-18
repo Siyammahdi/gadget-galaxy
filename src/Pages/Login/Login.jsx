@@ -69,7 +69,7 @@ const Login = () => {
                         <h1 data-aos="fade-down" className="text-5xl font-bold">Login now!</h1>
                         <p data-aos="fade-up" className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
-                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-lg md:shadow-2xl  backdrop-blur-md mb-10">
+                    <div data-aos="fade-right" className="card flex-shrink-0 w-full max-w-sm shadow-black shadow-lg md:shadow-2xl  backdrop-blur-md mb-10 mt-20">
                         <form onSubmit={handleLogin} className="card-body">
                             <div data-aos="fade-down" className="form-control">
                                 <label className="label">
