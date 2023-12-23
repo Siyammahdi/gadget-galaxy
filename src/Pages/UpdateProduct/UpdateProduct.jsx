@@ -36,7 +36,7 @@ const UpdateProduct = () => {
         console.log(newProduct);
 
         //send new data to server
-        fetch(`http://localhost:5000/gadget/${_id}`, {
+        fetch(`https://gadget-galaxy-server-one.vercel.app/Gadgets/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

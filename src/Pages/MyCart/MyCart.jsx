@@ -2,15 +2,15 @@ import { useLoaderData } from "react-router-dom";
 import CartCard from "./CartCard";
 import { FaOpencart } from 'react-icons/Fa';
 import Swal from "sweetalert2";
-import { useState } from "react";
+// import { useState } from "react";
 
 
 const MyCart = () => {
 
     const cartData = useLoaderData();
 
-    const [items, setItems] = useState([cartData]);
-    console.log(items);
+    // const [items, setItems] = useState([cartData]);
+    // console.log(items);
     
     const handleDelete = (_id) => {
         console.log(_id);
@@ -25,7 +25,7 @@ const MyCart = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/gadget/${_id}`, {
+                fetch(`https://gadget-galaxy-server-one.vercel.app/gadget/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -37,13 +37,12 @@ const MyCart = () => {
                                 'Your Gadget has been deleted successfully.',
                                 'success',
                             )
-
-                            setItems(prevItems => prevItems.filter(item => item._id !== _id))
+                                window.location.reload()
+                            // setItems(prevItems => prevItems.filter(item => item._id !== _id))
                         }
 
                     })
             }
-            window.location.reload()
         })
     }
 

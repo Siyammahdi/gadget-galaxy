@@ -21,7 +21,7 @@ const ProductDetails = () => {
 
 
     const handleAddCart = () => {
-        fetch('http://localhost:5000/cart', {
+        fetch('https://gadget-galaxy-server-one.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

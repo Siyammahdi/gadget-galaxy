@@ -45,22 +45,22 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <PrivetRoute><MyCart></MyCart></PrivetRoute>,
-        loader: () => fetch(`http://localhost:5000/cart`)
+        loader: () => fetch(`https://gadget-galaxy-server-one.vercel.app/cart`)
       },
       {
         path:"/products/:brand",
         element: <Products></Products>,
-        loader: ({params}) => fetch(`http://localhost:5000/gadgets/${params.brand}`)
+        loader: ({params}) => fetch(`https://gadget-galaxy-server-one.vercel.app/Gadgets/${params.brand}`)
       },
       {
         path: "/updateProduct/:id",
         element: <PrivetRoute><UpdateProduct></UpdateProduct></PrivetRoute>,
-        loader: () => fetch(`http://localhost:5000/gadgets`)
+        loader: () => fetch(`https://gadget-galaxy-server-one.vercel.app/Gadgets`)
       },
       {
         path:"/productDetails/:id",
         element: <PrivetRoute><ProductDetails></ProductDetails></PrivetRoute>,
-        loader: () => fetch(`http://localhost:5000/gadgets`)
+        loader: () => fetch(`https://gadget-galaxy-server-one.vercel.app/Gadgets`)
       }
     ]
   },
