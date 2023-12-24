@@ -11,7 +11,6 @@ import Root from './Layout/Root';
 import AuthProvider from './Providers/AuthProvider';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
-// import AuthProvider from './Providers/AuthProvider';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import MyCart from './Pages/MyCart/MyCart';
 import Products from './Pages/Products/Products';
